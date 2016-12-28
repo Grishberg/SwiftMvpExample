@@ -21,6 +21,9 @@ class ViewController: UIViewController, UserView {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        if presenter != nil {
+            presenter!.detachView()
+        }
         // Dispose of any resources that can be recreated.
     }
 

@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UserView {
 
+    var presenter: UserPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let service: UserServiceProtocol = UserService()
+        presenter = UserPresenter(userService: service)
+        presenter!.attachView(view: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func downloadButtonClicked(_ sender: Any) {
+        presenter!.onDownloadClicked()
+    }
+    
+    func showProgress() {
+        print("show prgogress")
+    }
+    
+    func hideProgress() {
+        print("hide progress")
+    }
+
+    func showUser(user: [UserViewData]){
+        print("show users \(user)")
+    }
 
 }
 

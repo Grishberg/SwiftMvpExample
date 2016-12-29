@@ -14,7 +14,8 @@ class ViewController: UIViewController, UserView {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let service: UserServiceProtocol = UserService()
+        let sessionRepository = SessionRepository()
+        let service: UserServiceProtocol = UserService(sessionRepository: sessionRepository)
         presenter = UserPresenter(userService: service)
         presenter!.attachView(view: self)
     }

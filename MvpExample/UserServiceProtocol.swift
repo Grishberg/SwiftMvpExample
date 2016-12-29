@@ -8,5 +8,10 @@
 
 import Foundation
 protocol UserServiceProtocol {
+    
     func getUsers(callback:@escaping ([User]) -> Void )
+    
+    func requestLightStatus(callback:@escaping (Bool) -> Void )
+    
+    func auth(login: String, password: String, callback:@escaping (Bool) -> Void )
 }

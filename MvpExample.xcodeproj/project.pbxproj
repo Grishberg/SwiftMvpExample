@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F08E230A1E1427870094F17B /* SessionRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08E23091E1427870094F17B /* SessionRepositoryProtocol.swift */; };
+		F08E230C1E1428560094F17B /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08E230B1E1428560094F17B /* SessionRepository.swift */; };
 		F0E0788A1DEF38C400DA13F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078891DEF38C400DA13F7 /* AppDelegate.swift */; };
 		F0E0788C1DEF38C400DA13F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0788B1DEF38C400DA13F7 /* ViewController.swift */; };
 		F0E0788F1DEF38C400DA13F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E0788D1DEF38C400DA13F7 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F08E23091E1427870094F17B /* SessionRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepositoryProtocol.swift; sourceTree = "<group>"; };
+		F08E230B1E1428560094F17B /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		F0E078861DEF38C400DA13F7 /* MvpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E078891DEF38C400DA13F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E0788B1DEF38C400DA13F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			children = (
 				F0E078BB1DEF3A1700DA13F7 /* UserService.swift */,
 				F0E078C51DEF3CB300DA13F7 /* UserServiceProtocol.swift */,
+				F08E23091E1427870094F17B /* SessionRepositoryProtocol.swift */,
+				F08E230B1E1428560094F17B /* SessionRepository.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -316,7 +322,9 @@
 				F0E078C11DEF3BD400DA13F7 /* UserView.swift in Sources */,
 				F0E0788C1DEF38C400DA13F7 /* ViewController.swift in Sources */,
 				F0E078C41DEF3C6900DA13F7 /* UserPresenter.swift in Sources */,
+				F08E230A1E1427870094F17B /* SessionRepositoryProtocol.swift in Sources */,
 				F0E0788A1DEF38C400DA13F7 /* AppDelegate.swift in Sources */,
+				F08E230C1E1428560094F17B /* SessionRepository.swift in Sources */,
 				F0E078B91DEF38ED00DA13F7 /* User.swift in Sources */,
 				F0E078C61DEF3CB300DA13F7 /* UserServiceProtocol.swift in Sources */,
 				F0E078BE1DEF3B7B00DA13F7 /* UserViewData.swift in Sources */,

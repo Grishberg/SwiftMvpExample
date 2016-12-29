@@ -21,6 +21,7 @@ class UserService: UserServiceProtocol{
     func auth(login: String, password: String, callback:@escaping (Bool) -> Void ){
         //настройка параметров запроса
         var request = URLRequest(url : authUrl)
+        request.httpMethod = "POST"
         let postString = "ean=\(login)&password=\(password)";
         request.httpBody = postString.data(using: String.Encoding.utf8);
 

@@ -16,6 +16,9 @@
 		F0AF68C41E1EBA6C005ECA95 /* LightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AF68C21E1EBA6C005ECA95 /* LightViewController.xib */; };
 		F0AF68C61E1F6B3D005ECA95 /* LightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF68C51E1F6B3D005ECA95 /* LightPresenter.swift */; };
 		F0AF68C81E1F6B7C005ECA95 /* LightViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF68C71E1F6B7C005ECA95 /* LightViewProtocol.swift */; };
+		F0AF68D21E1F7871005ECA95 /* LightServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF68D11E1F7871005ECA95 /* LightServiceProtocol.swift */; };
+		F0AF68D41E1F7977005ECA95 /* LightStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF68D31E1F7977005ECA95 /* LightStatusResponse.swift */; };
+		F0AF68D61E1F7A45005ECA95 /* LightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF68D51E1F7A45005ECA95 /* LightService.swift */; };
 		F0E0788A1DEF38C400DA13F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078891DEF38C400DA13F7 /* AppDelegate.swift */; };
 		F0E0788C1DEF38C400DA13F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0788B1DEF38C400DA13F7 /* ViewController.swift */; };
 		F0E0788F1DEF38C400DA13F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E0788D1DEF38C400DA13F7 /* Main.storyboard */; };
@@ -23,9 +26,7 @@
 		F0E078941DEF38C400DA13F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E078921DEF38C400DA13F7 /* LaunchScreen.storyboard */; };
 		F0E0789F1DEF38C400DA13F7 /* MvpExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0789E1DEF38C400DA13F7 /* MvpExampleTests.swift */; };
 		F0E078AA1DEF38C400DA13F7 /* MvpExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078A91DEF38C400DA13F7 /* MvpExampleUITests.swift */; };
-		F0E078B91DEF38ED00DA13F7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078B81DEF38ED00DA13F7 /* User.swift */; };
 		F0E078BC1DEF3A1700DA13F7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078BB1DEF3A1700DA13F7 /* AuthService.swift */; };
-		F0E078BE1DEF3B7B00DA13F7 /* UserViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078BD1DEF3B7B00DA13F7 /* UserViewData.swift */; };
 		F0E078C11DEF3BD400DA13F7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078C01DEF3BD400DA13F7 /* AuthView.swift */; };
 		F0E078C41DEF3C6900DA13F7 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078C31DEF3C6900DA13F7 /* AuthPresenter.swift */; };
 		F0E078C61DEF3CB300DA13F7 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E078C51DEF3CB300DA13F7 /* AuthServiceProtocol.swift */; };
@@ -58,6 +59,9 @@
 		F0AF68C21E1EBA6C005ECA95 /* LightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightViewController.xib; sourceTree = "<group>"; };
 		F0AF68C51E1F6B3D005ECA95 /* LightPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightPresenter.swift; sourceTree = "<group>"; };
 		F0AF68C71E1F6B7C005ECA95 /* LightViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightViewProtocol.swift; sourceTree = "<group>"; };
+		F0AF68D11E1F7871005ECA95 /* LightServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightServiceProtocol.swift; sourceTree = "<group>"; };
+		F0AF68D31E1F7977005ECA95 /* LightStatusResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightStatusResponse.swift; sourceTree = "<group>"; };
+		F0AF68D51E1F7A45005ECA95 /* LightService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightService.swift; sourceTree = "<group>"; };
 		F0E078861DEF38C400DA13F7 /* MvpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E078891DEF38C400DA13F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E0788B1DEF38C400DA13F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,9 +75,7 @@
 		F0E078A51DEF38C400DA13F7 /* MvpExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvpExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E078A91DEF38C400DA13F7 /* MvpExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvpExampleUITests.swift; sourceTree = "<group>"; };
 		F0E078AB1DEF38C400DA13F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0E078B81DEF38ED00DA13F7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F0E078BB1DEF3A1700DA13F7 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		F0E078BD1DEF3B7B00DA13F7 /* UserViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewData.swift; sourceTree = "<group>"; };
 		F0E078C01DEF3BD400DA13F7 /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		F0E078C31DEF3C6900DA13F7 /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		F0E078C51DEF3CB300DA13F7 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
@@ -107,9 +109,86 @@
 		F08E23111E1E47D30094F17B /* common */ = {
 			isa = PBXGroup;
 			children = (
+				F08E230F1E1E348A0094F17B /* ErrorContainer.swift */,
 				F08E23121E1E48150094F17B /* RequestHelper.swift */,
 			);
 			name = common;
+			sourceTree = "<group>";
+		};
+		F0AF68C91E1F73F2005ECA95 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF68CC1E1F7540005ECA95 /* model */,
+				F0AF68CB1E1F74E5005ECA95 /* view */,
+				F0AF68CA1E1F73FE005ECA95 /* presenter */,
+			);
+			name = auth;
+			sourceTree = "<group>";
+		};
+		F0AF68CA1E1F73FE005ECA95 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F0E078C31DEF3C6900DA13F7 /* AuthPresenter.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		F0AF68CB1E1F74E5005ECA95 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0788D1DEF38C400DA13F7 /* Main.storyboard */,
+				F0E0788B1DEF38C400DA13F7 /* ViewController.swift */,
+				F0E078C01DEF3BD400DA13F7 /* AuthView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		F0AF68CC1E1F7540005ECA95 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F08E230D1E1E2DF00094F17B /* AuthResponse.swift */,
+				F0E078C51DEF3CB300DA13F7 /* AuthServiceProtocol.swift */,
+				F0E078BB1DEF3A1700DA13F7 /* AuthService.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		F0AF68CD1E1F75B1005ECA95 /* light */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF68D01E1F75C9005ECA95 /* model */,
+				F0AF68CF1E1F75C1005ECA95 /* presenter */,
+				F0AF68CE1E1F75B9005ECA95 /* view */,
+			);
+			name = light;
+			sourceTree = "<group>";
+		};
+		F0AF68CE1E1F75B9005ECA95 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF68C21E1EBA6C005ECA95 /* LightViewController.xib */,
+				F0AF68C11E1EBA6C005ECA95 /* LightViewController.swift */,
+				F0AF68C71E1F6B7C005ECA95 /* LightViewProtocol.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		F0AF68CF1E1F75C1005ECA95 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF68C51E1F6B3D005ECA95 /* LightPresenter.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		F0AF68D01E1F75C9005ECA95 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF68D11E1F7871005ECA95 /* LightServiceProtocol.swift */,
+				F0AF68D31E1F7977005ECA95 /* LightStatusResponse.swift */,
+				F0AF68D51E1F7A45005ECA95 /* LightService.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		F0E0787D1DEF38C400DA13F7 = {
@@ -135,10 +214,9 @@
 		F0E078881DEF38C400DA13F7 /* MvpExample */ = {
 			isa = PBXGroup;
 			children = (
-				F0E078C21DEF3C4500DA13F7 /* presenter */,
-				F0E078BF1DEF3BC100DA13F7 /* view */,
+				F0AF68CD1E1F75B1005ECA95 /* light */,
+				F0AF68C91E1F73F2005ECA95 /* auth */,
 				F0E078BA1DEF39FF00DA13F7 /* service */,
-				F0E078B71DEF38DA00DA13F7 /* model */,
 				F0E078891DEF38C400DA13F7 /* AppDelegate.swift */,
 				F0E078901DEF38C400DA13F7 /* Assets.xcassets */,
 				F0E078921DEF38C400DA13F7 /* LaunchScreen.storyboard */,
@@ -165,49 +243,14 @@
 			path = MvpExampleUITests;
 			sourceTree = "<group>";
 		};
-		F0E078B71DEF38DA00DA13F7 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				F0E078B81DEF38ED00DA13F7 /* User.swift */,
-				F0E078BD1DEF3B7B00DA13F7 /* UserViewData.swift */,
-				F08E230D1E1E2DF00094F17B /* AuthResponse.swift */,
-				F08E230F1E1E348A0094F17B /* ErrorContainer.swift */,
-			);
-			name = model;
-			sourceTree = "<group>";
-		};
 		F0E078BA1DEF39FF00DA13F7 /* service */ = {
 			isa = PBXGroup;
 			children = (
 				F08E23111E1E47D30094F17B /* common */,
-				F0E078BB1DEF3A1700DA13F7 /* AuthService.swift */,
-				F0E078C51DEF3CB300DA13F7 /* AuthServiceProtocol.swift */,
 				F08E23091E1427870094F17B /* SessionRepositoryProtocol.swift */,
 				F08E230B1E1428560094F17B /* SessionRepository.swift */,
 			);
 			name = service;
-			sourceTree = "<group>";
-		};
-		F0E078BF1DEF3BC100DA13F7 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				F0AF68C21E1EBA6C005ECA95 /* LightViewController.xib */,
-				F0AF68C11E1EBA6C005ECA95 /* LightViewController.swift */,
-				F0E0788D1DEF38C400DA13F7 /* Main.storyboard */,
-				F0E0788B1DEF38C400DA13F7 /* ViewController.swift */,
-				F0E078C01DEF3BD400DA13F7 /* AuthView.swift */,
-				F0AF68C71E1F6B7C005ECA95 /* LightViewProtocol.swift */,
-			);
-			name = view;
-			sourceTree = "<group>";
-		};
-		F0E078C21DEF3C4500DA13F7 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-				F0E078C31DEF3C6900DA13F7 /* AuthPresenter.swift */,
-				F0AF68C51E1F6B3D005ECA95 /* LightPresenter.swift */,
-			);
-			name = presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,9 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AF68D61E1F7A45005ECA95 /* LightService.swift in Sources */,
 				F0E078BC1DEF3A1700DA13F7 /* AuthService.swift in Sources */,
 				F08E23131E1E48150094F17B /* RequestHelper.swift in Sources */,
 				F0E078C11DEF3BD400DA13F7 /* AuthView.swift in Sources */,
+				F0AF68D21E1F7871005ECA95 /* LightServiceProtocol.swift in Sources */,
 				F0E0788C1DEF38C400DA13F7 /* ViewController.swift in Sources */,
 				F0E078C41DEF3C6900DA13F7 /* AuthPresenter.swift in Sources */,
 				F08E23101E1E348A0094F17B /* ErrorContainer.swift in Sources */,
@@ -360,10 +405,9 @@
 				F0E0788A1DEF38C400DA13F7 /* AppDelegate.swift in Sources */,
 				F08E230C1E1428560094F17B /* SessionRepository.swift in Sources */,
 				F08E230E1E1E2DF00094F17B /* AuthResponse.swift in Sources */,
-				F0E078B91DEF38ED00DA13F7 /* User.swift in Sources */,
 				F0E078C61DEF3CB300DA13F7 /* AuthServiceProtocol.swift in Sources */,
-				F0E078BE1DEF3B7B00DA13F7 /* UserViewData.swift in Sources */,
 				F0AF68C31E1EBA6C005ECA95 /* LightViewController.swift in Sources */,
+				F0AF68D41E1F7977005ECA95 /* LightStatusResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

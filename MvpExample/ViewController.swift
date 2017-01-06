@@ -44,9 +44,6 @@ class ViewController: UIViewController, AuthView {
         print("hide progress")
     }
 
-    func showUser(user: [UserViewData]){
-        print("show users \(user)")
-    }
     
     func getLogin() -> String {
         return loginTextField.text!

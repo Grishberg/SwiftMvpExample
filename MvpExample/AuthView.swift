@@ -11,7 +11,6 @@ import Foundation
 protocol AuthView {
     func showProgress()
     func hideProgress()
-    func showUser(user: [UserViewData])
     func getLogin() -> String
     func getPassword() -> String
     func showLightScreen()

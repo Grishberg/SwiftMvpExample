@@ -10,11 +10,8 @@ import Foundation
 
 class AuthService: RequesetHelper, AuthServiceProtocol{
     
-    var sessionRepository: SessionRepositoryProtocol
-    
     init(sessionRepository: SessionRepositoryProtocol) {
-        self.sessionRepository = sessionRepository
-        super.init(url: "http://192.168.2.204:8001")
+        super.init(url: "http://192.168.2.204:8001", sessionRepo: sessionRepository)
     }
     
     // Авторизация
@@ -36,7 +33,4 @@ class AuthService: RequesetHelper, AuthServiceProtocol{
         }
     }
     
-    // загрузка статуса подсветки
-    func requestLightStatus(callback:@escaping (Bool) -> Void ){
-    }
 }

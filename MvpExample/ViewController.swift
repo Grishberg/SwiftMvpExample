@@ -8,15 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController, UserView {
+class ViewController: UIViewController, AuthView {
 
-    var presenter: UserPresenter?
+    let sessionRepository = SessionRepository()
+    @IBOutlet weak var loginTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    var presenter: AuthPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let sessionRepository = SessionRepository()
-        let service: UserServiceProtocol = UserService(sessionRepository: sessionRepository)
-        presenter = UserPresenter(userService: service)
+        let service: AuthServiceProtocol = AuthService(sessionRepository: sessionRepository)
+        presenter = AuthPresenter(userService: service)
         presenter!.attachView(view: self)
     }
 
@@ -43,6 +47,28 @@ class ViewController: UIViewController, UserView {
     func showUser(user: [UserViewData]){
         print("show users \(user)")
     }
+    
+    func getLogin() -> String {
+        return loginTextField.text!
+    }
 
+    func getPassword() -> String{
+        return passwordTextField.text!
+    }
+    
+    // Открыть экран управления подсветкой
+    func showLightScreen() {
+        //Bundle.main.loadNibNamed("LightViewController", owner: self, options: nil)
+        //let view = objects?[0] as! UIView
+        let secondViewController:LightViewController = LightViewController(sessionRepository: sessionRepository)
+        
+        self.present(secondViewController, animated: true, completion: nil)
+    }
+    
+    func showError() {
+        let alert = UIAlertController(title: "Auth error", message: "Bad login or password", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 

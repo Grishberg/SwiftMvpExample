@@ -8,8 +8,12 @@
 
 import Foundation
 
-protocol UserView {
+protocol AuthView {
     func showProgress()
     func hideProgress()
     func showUser(user: [UserViewData])
+    func getLogin() -> String
+    func getPassword() -> String
+    func showLightScreen()
+    func showError()
 }

@@ -5,6 +5,7 @@
 //  Created by Grigory Rylov on 30.11.16.
 //  Copyright © 2016 Grigory Rylov. All rights reserved.
 //
+// Презентер для управления авторизацией
 
 import Foundation
 class AuthPresenter{

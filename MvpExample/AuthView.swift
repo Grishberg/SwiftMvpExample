@@ -9,9 +9,19 @@
 import Foundation
 
 protocol AuthView: ErrorViewProtocol {
+    
+    // Отображение прогресса
     func showProgress()
+
+    // Скрытие прогресса
     func hideProgress()
+    
+    // возвращение логина
     func getLogin() -> String
+    
+    // возвращение пароля
     func getPassword() -> String
+    
+    // переход на экран управления подсветкой
     func showLightScreen()
 }

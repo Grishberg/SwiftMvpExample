@@ -26,7 +26,7 @@ class LightService: RequesetHelper, LightServiceProtocol{
 
     }
 
-    
+    // изменение статуса подсветки
     func changeLightStatus(newStatus: Bool, callback:@escaping (LightStatusResponse) -> Void ){
         //настройка параметров запроса
         let postString = "accessToken=\(self.sessionRepository.getToken()!)&status=\(newStatus ? 1 : 0)";
@@ -40,7 +40,5 @@ class LightService: RequesetHelper, LightServiceProtocol{
                 callback(lightStatusResponse!)
             }
         }
-
     }
-
 }

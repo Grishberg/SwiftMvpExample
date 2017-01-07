@@ -5,6 +5,7 @@
 //  Created by Grigory Rylov on 07.01.17.
 //  Copyright © 2017 Grigory Rylov. All rights reserved.
 //
+// Вспомогательный класс для отображения ошибки
 
 import UIKit
 class ErrorViewDelegate: ErrorViewProtocol{

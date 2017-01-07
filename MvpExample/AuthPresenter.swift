@@ -33,13 +33,19 @@ class AuthPresenter{
             if self != nil && self!.view != nil {
                 self!.view!.hideProgress()
                 
-                if authResponse.error != nil{
-                    self!.view!.showError()
+                if let error = authResponse.error {
+                    self!.processError(error: error)
                 } else {
                     self!.view?.showLightScreen()
                 }
             }
         })
+    }
+    
+    private func processError(error: ErrorContainer){
+        if error.code == 1002 {
+            view!.showAuthError()
+        }
     }
     
 }

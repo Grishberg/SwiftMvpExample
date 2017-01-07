@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, AuthView {
 
     let sessionRepository = SessionRepository()
+    var errorViewDelegate :ErrorViewDelegate?
+
     @IBOutlet weak var loginTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -19,6 +21,8 @@ class ViewController: UIViewController, AuthView {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        errorViewDelegate = ErrorViewDelegate(view: self)
+
         let service: AuthServiceProtocol = AuthService(sessionRepository: sessionRepository)
         presenter = AuthPresenter(userService: service)
         presenter!.attachView(view: self)
@@ -62,10 +66,8 @@ class ViewController: UIViewController, AuthView {
         self.present(secondViewController, animated: true, completion: nil)
     }
     
-    func showError() {
-        let alert = UIAlertController(title: "Auth error", message: "Bad login or password", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func showAuthError() {
+        errorViewDelegate!.showAuthError()
     }
 }
 

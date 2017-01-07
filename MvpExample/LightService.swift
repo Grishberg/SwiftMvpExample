@@ -12,7 +12,7 @@ class LightService: RequesetHelper, LightServiceProtocol{
     // загрузка статуса подсветки
     func requestLightStatus(callback:@escaping (LightStatusResponse) -> Void ){
         //настройка параметров запроса
-        let postString = "token=\(self.sessionRepository.getToken())";
+        let postString = "accessToken=\(self.sessionRepository.getToken()!)";
         self.makeGetRequest(method: "light", params: postString) {
             (response: NSDictionary?) in
             // worker thread
@@ -28,7 +28,19 @@ class LightService: RequesetHelper, LightServiceProtocol{
 
     
     func changeLightStatus(newStatus: Bool, callback:@escaping (LightStatusResponse) -> Void ){
-        
+        //настройка параметров запроса
+        let postString = "accessToken=\(self.sessionRepository.getToken()!)&status=\(newStatus ? 1 : 0)";
+        self.makePostRequest(method: "light", params: postString) {
+            (response: NSDictionary?) in
+            // worker thread
+            let lightStatusResponse = LightStatusResponse(json: response)
+            
+            OperationQueue.main.addOperation{
+                // result in main thread
+                callback(lightStatusResponse!)
+            }
+        }
+
     }
 
 }

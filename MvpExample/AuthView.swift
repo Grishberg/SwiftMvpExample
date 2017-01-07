@@ -8,11 +8,10 @@
 
 import Foundation
 
-protocol AuthView {
+protocol AuthView: ErrorViewProtocol {
     func showProgress()
     func hideProgress()
     func getLogin() -> String
     func getPassword() -> String
     func showLightScreen()
-    func showError()
 }

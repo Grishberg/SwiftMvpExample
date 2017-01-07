@@ -7,6 +7,6 @@
 //
 
 import Foundation
-protocol LightView {
+protocol LightView: ErrorViewProtocol {
     func showLightState(enabled: Bool)
 }

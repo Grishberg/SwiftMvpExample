@@ -17,10 +17,10 @@ class RequesetHelper{
     }
     
     func makePostRequest(method: String, params: String, callback:@escaping (NSDictionary?) -> Void ) {
-
         var request = URLRequest(url : URL(string: "\(baseUrl)/\(method)")!)
         request.httpMethod = "POST"
         request.httpBody = params.data(using: String.Encoding.utf8);
+        print("POST: params = \(params)")
         
         // обработчик запроса
         let task = URLSession.shared.dataTask(with: request) {
@@ -41,12 +41,11 @@ class RequesetHelper{
     }
     
     func makeGetRequest(method: String, params: String, callback:@escaping (NSDictionary?) -> Void ) {
-        let urlString = "\(baseUrl)/\(method)"
+        let urlString = "\(baseUrl)/\(method)?\(params)"
         print("url: \(urlString)")
         
         var request = URLRequest(url : URL(string: urlString)!)
         request.httpMethod = "GET"
-        request.httpBody = params.data(using: String.Encoding.utf8);
         
         // обработчик запроса
         let task = URLSession.shared.dataTask(with: request) {

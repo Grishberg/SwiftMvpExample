@@ -10,6 +10,7 @@ import UIKit
 
 class LightViewController: UIViewController, LightView {
     let presenter: LightPresenter!
+    var errorViewDelegate: ErrorViewDelegate?
     
     @IBOutlet weak var lightSwitch: UISwitch!
     
@@ -17,11 +18,13 @@ class LightViewController: UIViewController, LightView {
         let lightService = LightService(url: "http://192.168.2.204:8001", sessionRepo: sessionRepository)
         self.presenter = LightPresenter(lightService: lightService)
         super.init(nibName: nil, bundle: nil)
+        errorViewDelegate = ErrorViewDelegate(view: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.presenter = nil
         super.init(coder: aDecoder)
+        errorViewDelegate = ErrorViewDelegate(view: self)
     }
     
     @IBAction func onSwitchValueChanged(_ sender: Any) {
@@ -47,5 +50,8 @@ class LightViewController: UIViewController, LightView {
     func showLightState(enabled: Bool){
         lightSwitch.setOn(enabled, animated: true)
     }
-
+    
+    func showAuthError() {
+       errorViewDelegate!.showAuthError()
+    }
 }

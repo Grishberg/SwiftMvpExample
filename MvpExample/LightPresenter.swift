@@ -17,12 +17,7 @@ class LightPresenter{
     
     func attachView(view: LightView){
         self.view = view
-        service.requestLightStatus {
-            (status: LightStatusResponse) in
-            if status.status != nil {
-                view.showLightState(enabled: status.status!)
-            }
-        }
+        service.requestLightStatus(callback: processLighStatus)
     }
     
     func detachView(){
@@ -30,10 +25,36 @@ class LightPresenter{
     }
     
     func turnOnLight(){
-
+        self.changeLightState(newState: true)
     }
     
     func turnOffLight(){
-        
+        self.changeLightState(newState: false)
+    }
+    
+    private func changeLightState(newState: Bool){
+        service.changeLightStatus(newStatus: newState, callback: processLighStatus)
+    }
+
+    private func processLighStatus(status: LightStatusResponse){
+        if self.view == nil {
+            print("**** processLighStatus: view is nil")
+            return
+        }
+        if status.status != nil {
+            print("**** light state is \(status.status!)")
+            view!.showLightState(enabled: status.status!)
+        } else if let error = status.error {
+            view!.showLightState(enabled: false)
+            self.processError(error: error)
+        }
+    }
+    
+    private func processError(error: ErrorContainer){
+        print("**** process error response")
+        //TODO: replace with constants
+        if error.code == 1002 {
+            self.view!.showAuthError()
+        }
     }
 }
